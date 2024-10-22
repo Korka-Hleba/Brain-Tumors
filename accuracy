@@ -1,0 +1,13 @@
+============TEST METRICS=============
+Accuracy: 85.15625%
+              precision    recall  f1-score   support
+
+      Glioma       0.86      0.79      0.83       136
+  Meningioma       0.77      0.83      0.80       140
+    No Tumor       0.93      0.80      0.86       100
+   Pituitary       0.87      0.97      0.92       136
+
+    accuracy                           0.85       512
+   macro avg       0.86      0.85      0.85       512
+weighted avg       0.85      0.85      0.85       512
+
