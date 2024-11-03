@@ -85,7 +85,6 @@ new_size = (224, 224)
 X_train, y_train = preprocess_image(train_set, new_size)
 X_val, y_val = preprocess_image(val_set, new_size)
 
-# Преобразование меток в one-hot encoding для categorical_crossentropy
 y_train = to_categorical(y_train, num_classes=4)
 y_val = to_categorical(y_val, num_classes=4)
 
@@ -121,7 +120,6 @@ model = Model(inputs=base_model.input, outputs=predictions)
 model.compile(optimizer=Adam(learning_rate=0.0001), loss='categorical_crossentropy', metrics=['accuracy'])
 model.summary()
 
-# Коллбэки
 early_stopping = EarlyStopping(monitor='val_loss', patience=5, restore_best_weights=True)
 model_checkpoint = ModelCheckpoint('best_model.keras', monitor='val_loss', save_best_only=True)
 
